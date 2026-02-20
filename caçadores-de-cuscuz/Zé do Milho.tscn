@@ -1,0 +1,111 @@
+[gd_scene load_steps=17 format=3 uid="uid://c28spyf8jma42"]
+
+[ext_resource type="Script" uid="uid://bm6h4l06x3bhr" path="res://zé_do_milho.gd" id="1_30kd3"]
+[ext_resource type="Texture2D" uid="uid://81gsb03hhap" path="res://Tiny Wonder Forest 1.0/characters/main character/Idle.png" id="1_joc76"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_30kd3"]
+radius = 5.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2s2c"]
+atlas = ExtResource("1_joc76")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt1tg"]
+atlas = ExtResource("1_joc76")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4orc"]
+atlas = ExtResource("1_joc76")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te66l"]
+atlas = ExtResource("1_joc76")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev11q"]
+atlas = ExtResource("1_joc76")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ljgu"]
+atlas = ExtResource("1_joc76")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njq8u"]
+atlas = ExtResource("1_joc76")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g0xv"]
+atlas = ExtResource("1_joc76")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioenc"]
+atlas = ExtResource("1_joc76")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kok7w"]
+atlas = ExtResource("1_joc76")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rkix"]
+atlas = ExtResource("1_joc76")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iac0q"]
+atlas = ExtResource("1_joc76")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_on0cv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2s2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt1tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4orc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te66l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ev11q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ljgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njq8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g0xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioenc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kok7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rkix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iac0q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Zé do MIlho" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_30kd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_30kd3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_on0cv")
+animation = &"idle"
