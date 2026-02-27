@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://x83gfllqcnnd"]
+
+[ext_resource type="Script" uid="uid://cp2rtv87ee87c" path="res://arma_cena.gd" id="1_3hffw"]
+[ext_resource type="Texture2D" uid="uid://bg8vgjrd484v5" path="res://Tiny Wonder Forest 1.0/tilemaps/Pixel Art Icon Pack - RPG/Weapon & Tool/Knife.png" id="2_ylmk0"]
+
+[node name="Arma_cena" type="Node2D"]
+script = ExtResource("1_3hffw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ylmk0")
