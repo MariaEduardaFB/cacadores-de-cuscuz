@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://wq8elsask8xt"]
+
+[ext_resource type="Script" uid="uid://yuux5qh0qfox" path="res://arma_pickup.gd" id="1_8c6xa"]
+
+[node name="arma_pickup" type="Area2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_8c6xa")
